@@ -13,7 +13,7 @@
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       window.addEventListener("message", (messageEvent) => {
-        console.warn({ messageEvent })
+        console.warn('Main received message: ', messageEvent.data)
       })
 
       document.querySelector("#start").addEventListener("click", () => {
