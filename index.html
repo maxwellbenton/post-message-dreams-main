@@ -9,6 +9,7 @@
   <p>Main</p>
   <iframe></iframe>
   <button id="start">Start</button>
+  <button id="pop-up">Launch Window</button>
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       window.addEventListener("message", (messageEvent) => {
@@ -18,6 +19,11 @@
       document.querySelector("#start").addEventListener("click", () => {
         const iframe = document.querySelector('iframe')
         iframe.src = "https://maxwellbenton.github.io/post-message-dreams-child/"
+      })
+
+      document.querySelector("#pop-up").addEventListener("click", () => {
+        const windowRef = window.open('Pop Up', 'three')
+        windowRef.location = "https://maxwellbenton.github.io/post-message-dreams-pop-up/"
       })
     })
     
