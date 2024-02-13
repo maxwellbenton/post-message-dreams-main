@@ -7,11 +7,20 @@
 </head>
 <body>
   <p>Main</p>
-  <iframe src=""></iframe>
+  <iframe></iframe>
+  <button id="start">Start</button>
   <script>
-    window.addEventListener("message", (messageEvent) => {
-      console.warn({ messageEvent })
+    window.addEventListener("DOMContentLoaded", () => {
+      window.addEventListener("message", (messageEvent) => {
+        console.warn({ messageEvent })
+      })
+
+      document.querySelector("#start").addEventListener("click", () => {
+        const iframe = document.querySelector('iframe')
+        iframe.src = "https://maxwellbenton.github.io/post-message-dreams-child/"
+      })
     })
+    
   </script>
 </body>
 </html>
